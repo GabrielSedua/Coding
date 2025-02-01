@@ -11,7 +11,9 @@
     "ace-builds": "^1.37.5",
     "core-js": "^3.8.3",
     "dompurify": "^3.2.4",
+    "express": "^4.21.2",
     "monaco-editor": "^0.52.2",
+    "path": "^0.12.7",
     "vue": "^3.2.13",
     "vue-router": "^4.5.0"
   },
@@ -43,5 +45,18 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielSedua/Coding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielSedua/Coding/issues"
+  },
+  "homepage": "https://github.com/GabrielSedua/Coding#readme"
 }
