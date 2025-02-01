@@ -26,19 +26,8 @@
 <script>
 export default {
   name: 'App',
-  data() {
-    return {
-      isMenuOpen: false, // Tracks whether the menu is open or not
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen; // Toggles the menu open/closed
-    },
-  },
 };
 </script>
-
 
 <style scoped>
 /* Styles for your navigation bar */
@@ -58,7 +47,6 @@ ul {
   display: flex;
   justify-content: center;
   flex-grow: 1; /* This ensures the nav links are centered */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for the menu */
 }
 
 li {
@@ -96,59 +84,4 @@ router-link.active {
   height: auto;
 }
 
-/* Hamburger menu icon */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 25px;
-  width: 30px;
-  cursor: pointer;
-}
-
-.hamburger .bar {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-  /* For mobile view */
-  ul {
-    position: absolute;
-    top: 70px; /* Adjust based on the height of the nav */
-    left: 0;
-    width: 100%;
-    background-color: #42b983;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(-100%); /* Hide the menu initially */
-    padding: 10px 0;
-  }
-
-  ul.active {
-    transform: translateY(0); /* Show the menu when active */
-  }
-
-  li {
-    margin: 10px 0; /* Space between items */
-  }
-
-  .hamburger {
-    display: flex; /* Show the hamburger icon on mobile */
-  }
-
-  /* Optional: add a backdrop when the menu is open */
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1; /* Behind the menu */
-  }
-}
 </style>
