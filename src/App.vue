@@ -14,7 +14,12 @@
         <li><router-link to="/note-app">Editor</router-link></li> <!-- Link to NoteApp -->
         <li><router-link to="/complete-code-editor" active-class="active-link">Complete</router-link></li> <!-- Link to CompleteCodeEditor page -->
       </ul>
-
+      <!-- Hamburger Icon -->
+           <div class="hamburger" @click="toggleMenu">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+           </div>
 
     </nav>
 
@@ -61,6 +66,23 @@ router-link {
 
 router-link.active {
   color: #ff6347;
+}
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 /* Background color for the entire app */
